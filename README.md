@@ -23,6 +23,8 @@ Datenausgabe:
 > * Umsatz pro Tag / Monat 
     
 ![Bild1](Bild1.png)
+![Bild2](Bild2.png)
+![Bild2](Bild3.png)
 
     
     
