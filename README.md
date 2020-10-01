@@ -29,7 +29,7 @@ Datenausgabe:
 
 # Flowchart
 Szenario 1 - Einrichtung
-![Szenario1](Szenario1.jpg)
+![Szenario1](Szenario1.png)
 
 Szenario 2 - Gäste platzieren
 ![Szenario2](Szenario2.jpg)
