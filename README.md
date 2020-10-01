@@ -22,8 +22,7 @@ Datenausgabe:
 > * Rechnung
 > * Umsatz pro Tag / Monat 
     
-![Bild1](/OneDrive/Dokumente/DBM/3.Semester/PRO2/Projektarbeit/Bild1.png)
-Format: ![alt text](url)
+![Bild1](Bild1.png)
 
     
     
