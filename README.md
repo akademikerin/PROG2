@@ -21,10 +21,24 @@ Datenverarbeitung / Speicherung:
 Datenausgabe:
 > * Rechnung
 > * Umsatz pro Tag / Monat 
-    
+
+# Visuelle Darstellung
 ![Bild1](Bild1.png)
 ![Bild2](Bild2.png)
 ![Bild2](Bild3.png)
+
+# Flowchart
+> Szenario 1 - Einrichtung
+![Szenario1](Szenario1.jpg)
+
+> Szenario 2 - Gäste platzieren
+![Szenario2](Szenario2.jpg)
+
+> Szenario 3 - Bestellung aufnehmen und servieren
+![Szenario3](Szenario3.jpg)
+
+> Szenario 4 - Einkassieren
+![Szenario4](Szenario4.jpg)
 
     
     
