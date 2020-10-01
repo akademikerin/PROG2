@@ -1,4 +1,4 @@
-#Projekt "Restaurant Hirschen"#
+# Projekt "Restaurant Hirschen"
 
 **Ausgangslage**
 Das Restaurant Hirschen in Oberägeri wird regelmässig von vielen Gästen besucht. Das Gasthaus ist in drei Bereiche aufgeteilt: Das "Beizli", den Saal und die Terrasse. Insgesamt haben xy Gäste platz. 
@@ -10,19 +10,20 @@ Um neuen Mitarbeitern sowie Aushilfe-Angestellte, welche unregelmässig im Resta
 
 **Workflow**
 Dateneingabe: 
-	* Name der Gäste, die reserviert haben (z.B. Meier) 
-	* Bestellte Getränke und Gerichte pro Gast
+	- Name der Gäste, die reserviert haben (z.B. Meier) 
+	- Bestellte Getränke und Gerichte pro Gast
 
 Datenverarbeitung / Speicherung:
-	* Preise pro Gast bzw. pro Tisch berechnen
-	* Bezahlungsprozess
-	* Tischordnung ("übliche" und "neu")
+	- Preise pro Gast bzw. pro Tisch berechnen
+	- Bezahlungsprozess
+	- Tischordnung ("übliche" und "neu")
 
 Datenausgabe:
-	* Rechnung
-	* Umsatz pro Tag / Monat 
+	- Rechnung
+	- Umsatz pro Tag / Monat 
     
 ![Bild1](/OneDrive/Dokumente/DBM/3.Semester/PRO2/Projektarbeit/Bild1.png)
+Format: ![Alt Text](url)
 
     
     
