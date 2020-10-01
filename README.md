@@ -28,8 +28,6 @@ Datenausgabe:
 ![Bild2](Bild3.png)
 
 # Flowchart
-Szenario 1 - Einrichtung
-
 ![Szenario1](Szenario1.jpg)
 
 Szenario 2 - Gäste platzieren
