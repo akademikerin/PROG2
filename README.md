@@ -1,31 +1,29 @@
 # Projekt "Restaurant Hirschen"
 
 **Ausgangslage**
-Das Restaurant Hirschen in Oberägeri wird regelmässig von vielen Gästen besucht. Das Gasthaus ist in drei Bereiche aufgeteilt: Das "Beizli", den Saal und die Terrasse. Insgesamt haben 65 Gäste platz. 
-Die Tische werden ab und zu umgestellt, beispielsweise wenn eine grössere Gruppe reserviert, werden die Tische Nr. 14 und 15 zusammengeschoben. In den letzten Monaten gab es öfters einen Wechsel der Servicemitarbeiter und wie man weiss, braucht es eine gewisse Zeit, um diese einzuarbeiten. Dazu gehört eben auch, dass sie sich mit der Tischordnung vertraut machen.
-Das kann für den Anfang etwas kompliziert sein und die neuen Mitarbeiter verwirren.
+Das Restaurant Hirschen in Oberägeri wird regelmässig von vielen Gästen besucht. Die Speisekarte ist relativ überschaubar, dennoch scheinen die Gerichte bzw. die Auswahl gut bei den Gästen anzukommen.
+
 
 **Projektidee**
-Um neuen Mitarbeitern sowie Aushilfe-Angestellte, welche unregelmässig im Restaurant arbeiten, den Arbeitsalltag etwas zu erleichtern, soll eine Applikation entwickelt werden. Diese soll die Aufteilung der Tische und den dazugehörigen Plätzen (Stühle) aufzeigen. Falls Gäste reservieren, soll deren Name auf dem Tisch im System angezeigt werden. Die Bestellung kann direkt in der Anwendung aufgenommen werden, so wird auch sichergestellt, dass die einzelnen Personen gleich das richtige Gericht erhalten (ohne dass man nachfragen muss). Des Weiteren soll dies auch den Abrechnungsprozess vereinfachen, da angegeben werden kann, ob zusammen oder einzeln bezahlt wird.
+Die Gäste sollen nach ihrem Besuch die Möglichkeit haben, für ihre ausgewählte Speisen online eine Bewertung abzugeben. Sie sollen dabei Sterne von 1 bis 5 vergeben können und zusätzlich einen Kommentar eingeben, falls erwünscht. Die generierten Daten zeigen dann auf, welche Gerichte besonders gut bei den Gästen angekommen sind und welche weniger. Diese Auswertung soll dem Restaurant helfen, ihre Leistung zu verbessern.
+
 
 **Workflow**
-> Dateneingabe: 
-> * Name der Gäste, die reserviert haben (z.B. Meier) 
-> * Bestellte Getränke und Gerichte pro Gast
-
+Dateneingabe: 
+> * Eingabe Speisen, die der Gast konsumiert hat
+> * Bewertung der Speisen (Sternesystem plus Kommentarfunktion)
+	
 Datenverarbeitung / Speicherung:
-> * Preise pro Gast bzw. pro Tisch berechnen
-> * Bezahlungsprozess
-> * Tischordnung ("übliche" und "neu")
-
+> * Auswertung der Bewertungsdaten - durchschnittliche Bewertung der Speise + Auflistung der Kommentare
+	
 Datenausgabe:
-> * Rechnung
-> * Umsatz pro Tag / Monat 
+> * Auswertung soll als Excel File herausgegeben werden
+
 
 # Visuelle Darstellung
 ![Bild1](Bild1.png)
 ![Bild2](Bild2.png)
-![Bild2](Bild3.png)
+
 
 # Flowchart
 Szenario 1 - Einrichtung
