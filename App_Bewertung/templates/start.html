@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
         <title>{{ app_name }}</title>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+
+        <meta charset="UTF-8">
+        <meta name="author" content="Simone Kühne" />
+        <meta name="description" content="Bewertungs-Website">
+        <meta name="keywords" content="Bewertung,Restaurant,DBM,FHGR">
+        <meta name="date" content="11.11.2020">
+
     </head>
     <body>
-        <h1> {{ ueberschrift }} </h1>
-        <p> {{ einleitung }} </p>
+        <header>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="/">
+                        <h4>Home</h4>
+                        </a></li>
+                    <li><a href="/eingabe">
+                        <h4>Eingabe</h4>
+                        </a></li>
+                    <li><a href="/about">
+                        <h4>About</h4>
+                        </a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1>{{ ueberschrift }}</h1>
+        <p>{{ einleitung }}</p>
+
+
 
     </body>
 </html>
