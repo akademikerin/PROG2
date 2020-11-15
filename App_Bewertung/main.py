@@ -17,8 +17,16 @@ def start():
 @app.route('/eingabe', methods=['POST', 'GET'])
 def eingabe():
     if request.method == 'POST':
-        bewertungseingabe = request.form['bewertungseingabe']
-        sterne = request.form['sterne']
+        bewertung_aussehen_vorspeise = request.form['sterne_aussehen_vorspeise']
+        bewertung_geschmack_vorspeise = request.form['sterne_geschmack_vorspeise']
+        bewertung_menge_vorspeise = request.form['sterne_menge_vorspeise']
+        bewertung_aussehen_hauptspeise = request.form['sterne_aussehen_hauptspeise']
+        bewertung_geschmack_hauptspeise = request.form['sterne_geschmack_hauptspeise']
+        bewertung_menge_hauptspeise = request.form['sterne_menge_hauptspeise']
+        bewertung_aussehen_dessert = request.form['sterne_aussehen_dessert']
+        bewertung_geschmack_dessert = request.form['sterne_geschmack_dessert']
+        bewertung_menge_dessert = request.form['sterne_menge_dessert']
+        bewertungseingabe = bewertung_aussehen_vorspeise, bewertung_geschmack_vorspeise, bewertung_menge_vorspeise, bewertung_aussehen_hauptspeise, bewertung_geschmack_hauptspeise, bewertung_menge_hauptspeise, bewertung_aussehen_dessert, bewertung_geschmack_dessert, bewertung_menge_dessert
         antwort = speichern(bewertungseingabe, sterne)
         return 'Gespeicherte Daten: <br>' + str(antwort)
     return render_template('eingabe.html', app_name="Bewertung abgeben")
@@ -29,11 +37,6 @@ def about():
     ueberschrift_txt = "Über diese Web-App"
     einleitung_txt = "Diese App wurde als Demo App programmiert"
     return render_template('start.html', app_name="About", ueberschrift=ueberschrift_txt, einleitung=einleitung_txt)
-
-
-
-
-
 
 
 if __name__ == "__main__":
