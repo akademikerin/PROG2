@@ -26,8 +26,8 @@ def eingabe():
         bewertung_aussehen_dessert = request.form['sterne_aussehen_dessert']
         bewertung_geschmack_dessert = request.form['sterne_geschmack_dessert']
         bewertung_menge_dessert = request.form['sterne_menge_dessert']
-        bewertungseingabe = bewertung_aussehen_vorspeise, bewertung_geschmack_vorspeise, bewertung_menge_vorspeise, bewertung_aussehen_hauptspeise, bewertung_geschmack_hauptspeise, bewertung_menge_hauptspeise, bewertung_aussehen_dessert, bewertung_geschmack_dessert, bewertung_menge_dessert
-        antwort = speichern(bewertungseingabe, sterne)
+        bewertungseingabe = {"Aussehen_Vorspeise": bewertung_aussehen_vorspeise, "Geschmack Vorspeise": bewertung_geschmack_vorspeise, "Menge Vorspeise": bewertung_menge_vorspeise, "Aussehen Hauptspeise": bewertung_aussehen_hauptspeise, "Geschmack Hauptspeise": bewertung_geschmack_hauptspeise, "Menge Hauptspeise": bewertung_menge_hauptspeise, "Aussehen Dessert": bewertung_aussehen_dessert,"Geschmack Dessert": bewertung_geschmack_dessert, "Menge Dessert": bewertung_menge_dessert}
+        antwort = speichern(bewertungseingabe)
         return 'Gespeicherte Daten: <br>' + str(antwort)
     return render_template('eingabe.html', app_name="Bewertung abgeben")
 

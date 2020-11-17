@@ -1,18 +1,16 @@
 import json
 
 
-def speichern(bewertungseingabe, sterne):
+def speichern(bewertungseingabe):
 
     try:
         with open("datenbank.json", "r") as datenbank:
             eintraege = json.load(datenbank)
 
     except:
-        eintraege = []
+        eintraege = {}
 
-    eintrag = bewertungseingabe, sterne
-
-    eintraege.append(eintrag)
+    eintraege["Aussehen_Vorspeise"] = bewertungseingabe
 
     with open("datenbank.json", "w") as datenbank:
         json.dump(eintraege, datenbank)
