@@ -8,7 +8,13 @@
     <form method="post">
         #Bewertung Vorspeise
         <h4>Was hatten Sie zur Vorspeise?</h4>
-        <input type="text" name="eingabe_vorspeise" placeholder="Bitte eingeben">
+        <select name="eingabe_vorspeisen" id="vorspeise">
+            {% for vorspeise in vorspeisen %}
+            {% endfor %}
+            <option value="salat">Salat</option>
+            <option value="suppe">Suppe</option>
+            <option value="tatar">Tatar</option>
+        </select>
         <br>
         <h5>Wie bewerten Sie das Aussehen der Vorspeise?</h5>
         <a>1 = sehr schlecht</a>
@@ -44,7 +50,13 @@
         <br>
         #Bewertung Hauptspeise
         <h4>Was hatten Sie zur Hauptspeise?</h4>
-        <input type="text" name="eingabe_hauptspeise" placeholder="Bitte eingeben">
+        <select name="eingabe_hauptspeisen" id="hauptspeise">
+            {% for hauptspeise in hauptspeisen %}
+            {% endfor %}
+            <option value="pizza">Pizza</option>
+            <option value="risotto">Risotto</option>
+            <option value="gnocchi">Gnocchi</option>
+        </select>
         <br>
         <h5>Wie bewerten Sie das Aussehen der Hauptspeise?</h5>
         <a>1 = sehr schlecht</a>
@@ -80,7 +92,13 @@
         <br>
         #Bewertung Dessert
         <h4>Was hatten Sie zum Dessert?</h4>
-        <input type="text" name="eingabe_dessert" placeholder="Bitte eingeben">
+        <select name="eingabe_dessert" id="dessert">
+            {% for dessert in desserts %}
+            {% endfor %}
+            <option value="sorbet">Sorbet</option>
+            <option value="tiramisu">Tiramisu</option>
+            <option value="kaese">Käse</option>
+        </select>
         <br>
         <h5>Wie bewerten Sie das Aussehen des Desserts?</h5>
         <a>1 = sehr schlecht</a>
