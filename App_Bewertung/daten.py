@@ -10,7 +10,8 @@ def speichern(bewertungseingabe):
     except:
         eintraege = {}
 
-    eintraege["Aussehen_Vorspeise"] = bewertungseingabe
+    eintraege["Bewertung Kunde"] = bewertungseingabe
+
 
     with open("datenbank.json", "w") as datenbank:
         json.dump(eintraege, datenbank)

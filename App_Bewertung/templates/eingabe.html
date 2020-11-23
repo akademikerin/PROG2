@@ -6,14 +6,12 @@
 </head>
 <body>
     <form method="post">
-        #Bewertung Vorspeise
+
         <h4>Was hatten Sie zur Vorspeise?</h4>
         <select name="eingabe_vorspeisen" id="vorspeise">
             {% for vorspeise in vorspeisen %}
+          <option value="{{ vorspeise }}">{{ vorspeise }}</option>
             {% endfor %}
-            <option value="salat">Salat</option>
-            <option value="suppe">Suppe</option>
-            <option value="tatar">Tatar</option>
         </select>
         <br>
         <h5>Wie bewerten Sie das Aussehen der Vorspeise?</h5>
@@ -48,14 +46,12 @@
         <a>1 --- 2 --- 3 --- 4 --- 5</a>
         <br>
         <br>
-        #Bewertung Hauptspeise
+
         <h4>Was hatten Sie zur Hauptspeise?</h4>
         <select name="eingabe_hauptspeisen" id="hauptspeise">
             {% for hauptspeise in hauptspeisen %}
+          <option value="{{ hauptspeise }}">{{ hauptspeise }}</option>
             {% endfor %}
-            <option value="pizza">Pizza</option>
-            <option value="risotto">Risotto</option>
-            <option value="gnocchi">Gnocchi</option>
         </select>
         <br>
         <h5>Wie bewerten Sie das Aussehen der Hauptspeise?</h5>
@@ -90,14 +86,12 @@
         <a>1 --- 2 --- 3 --- 4 --- 5</a>
         <br>
         <br>
-        #Bewertung Dessert
+
         <h4>Was hatten Sie zum Dessert?</h4>
-        <select name="eingabe_dessert" id="dessert">
+        <select name="eingabe_desserts" id="dessert">
             {% for dessert in desserts %}
+          <option value="{{ dessert }}">{{ dessert }}</option>
             {% endfor %}
-            <option value="sorbet">Sorbet</option>
-            <option value="tiramisu">Tiramisu</option>
-            <option value="kaese">Käse</option>
         </select>
         <br>
         <h5>Wie bewerten Sie das Aussehen des Desserts?</h5>

@@ -17,21 +17,24 @@ def start():
 @app.route('/eingabe', methods=['POST', 'GET'])
 def eingabe():
     if request.method == 'POST':
+        vorspeise = request.form['eingabe_vorspeisen']
         bewertung_aussehen_vorspeise = request.form['sterne_aussehen_vorspeise']
         bewertung_geschmack_vorspeise = request.form['sterne_geschmack_vorspeise']
         bewertung_menge_vorspeise = request.form['sterne_menge_vorspeise']
+        hauptspeise = request.form['eingabe_hauptspeisen']
         bewertung_aussehen_hauptspeise = request.form['sterne_aussehen_hauptspeise']
         bewertung_geschmack_hauptspeise = request.form['sterne_geschmack_hauptspeise']
         bewertung_menge_hauptspeise = request.form['sterne_menge_hauptspeise']
         bewertung_aussehen_dessert = request.form['sterne_aussehen_dessert']
         bewertung_geschmack_dessert = request.form['sterne_geschmack_dessert']
         bewertung_menge_dessert = request.form['sterne_menge_dessert']
+        dessert = request.form['eingabe_desserts']
         bewertung_service = request.form['sterne_service']
         anmerkungen = request.form['anmerkungen']
-        bewertungseingabe = {"Aussehen_Vorspeise": bewertung_aussehen_vorspeise, "Geschmack Vorspeise": bewertung_geschmack_vorspeise, "Menge Vorspeise": bewertung_menge_vorspeise, "Aussehen Hauptspeise": bewertung_aussehen_hauptspeise, "Geschmack Hauptspeise": bewertung_geschmack_hauptspeise, "Menge Hauptspeise": bewertung_menge_hauptspeise, "Aussehen Dessert": bewertung_aussehen_dessert, "Geschmack Dessert": bewertung_geschmack_dessert, "Menge Dessert": bewertung_menge_dessert, "Service": bewertung_service, "Anmerkungen": anmerkungen}
+        bewertungseingabe = {"vorspeise": vorspeise, "aussehen_vorspeise": bewertung_aussehen_vorspeise, "geschmack vorspeise": bewertung_geschmack_vorspeise, "menge vorspeise": bewertung_menge_vorspeise, "hauptspeise": hauptspeise, "aussehen hauptspeise": bewertung_aussehen_hauptspeise, "geschmack hauptspeise": bewertung_geschmack_hauptspeise, "menge hauptspeise": bewertung_menge_hauptspeise, "dessert": dessert, "aussehen dessert": bewertung_aussehen_dessert, "geschmack dessert": bewertung_geschmack_dessert, "menge dessert": bewertung_menge_dessert, "service": bewertung_service, "anmerkungen": anmerkungen}
         antwort = speichern(bewertungseingabe)
         return 'Gespeicherte Daten:' + str(bewertungseingabe) + ' <br>' + str(antwort)
-    return render_template('eingabe.html', app_name="Bewertung abgeben", vorspeisen=['Salat', 'Suppe', 'Tatar'])
+    return render_template('eingabe.html', app_name="Bewertung abgeben", vorspeisen=['Salat', 'Suppe', 'Tatar'], hauptspeisen=['Pizza', 'Pasta', 'Risotto'], desserts=['Sorbet', 'Tiramisu', 'Käse'])
 
 
 @app.route('/restaurant')

@@ -3,7 +3,9 @@ h1 {
 }
 
 .button1{
-background-color: red;
+background-color: #008CBA;
 border: none;
 color: white;
+text-align: center;
+font-size: 18px;
 }
