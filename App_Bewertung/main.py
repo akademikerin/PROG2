@@ -1,8 +1,9 @@
 from flask import Flask
 from flask import render_template
 from flask import request
+from flask import url_for
 
-from daten import speichern
+from daten import speichern, laden
 
 app = Flask("bewertung")
 
@@ -31,11 +32,43 @@ def eingabe():
         dessert = request.form['eingabe_desserts']
         bewertung_service = request.form['sterne_service']
         anmerkungen = request.form['anmerkungen']
-        bewertungseingabe = {"vorspeise": vorspeise, "aussehen_vorspeise": bewertung_aussehen_vorspeise, "geschmack vorspeise": bewertung_geschmack_vorspeise, "menge vorspeise": bewertung_menge_vorspeise, "hauptspeise": hauptspeise, "aussehen hauptspeise": bewertung_aussehen_hauptspeise, "geschmack hauptspeise": bewertung_geschmack_hauptspeise, "menge hauptspeise": bewertung_menge_hauptspeise, "dessert": dessert, "aussehen dessert": bewertung_aussehen_dessert, "geschmack dessert": bewertung_geschmack_dessert, "menge dessert": bewertung_menge_dessert, "service": bewertung_service, "anmerkungen": anmerkungen}
+        bewertungseingabe = {"vorspeise": vorspeise,
+                             "aussehen_vorspeise": bewertung_aussehen_vorspeise,
+                             "geschmack vorspeise": bewertung_geschmack_vorspeise,
+                             "menge vorspeise": bewertung_menge_vorspeise,
+                             "hauptspeise": hauptspeise,
+                             "aussehen hauptspeise": bewertung_aussehen_hauptspeise,
+                             "geschmack hauptspeise": bewertung_geschmack_hauptspeise,
+                             "menge hauptspeise": bewertung_menge_hauptspeise,
+                             "dessert": dessert,
+                             "aussehen dessert": bewertung_aussehen_dessert,
+                             "geschmack dessert": bewertung_geschmack_dessert,
+                             "menge dessert": bewertung_menge_dessert,
+                             "service": bewertung_service,
+                             "anmerkungen": anmerkungen
+                             }
         antwort = speichern(bewertungseingabe)
         return 'Gespeicherte Daten:' + str(bewertungseingabe) + ' <br>' + str(antwort)
-    return render_template('eingabe.html', app_name="Bewertung abgeben", vorspeisen=['Salat', 'Suppe', 'Tatar'], hauptspeisen=['Pizza', 'Pasta', 'Risotto'], desserts=['Sorbet', 'Tiramisu', 'Käse'])
+    return render_template(
+        'eingabe.html',
+        app_name="Bewertung abgeben",
+        vorspeisen=['Salat', 'Suppe', 'Tatar'],
+        hauptspeisen=['Pizza', 'Pasta', 'Risotto'],
+        desserts=['Sorbet', 'Tiramisu', 'Käse']
+    )
 
+@app.route('/liste')
+def liste():
+    gespeicherte_bewertungen = laden()
+    ueberschrift_txt = 'Ihre Bewertungsangaben'
+    einleitung_txt = 'Hier wird Ihre Bewertung zu den bestellten Speisen aufgelistet.'
+    return render_template(
+        'liste.html',
+        app_name="Restaurant",
+        ueberschrift=ueberschrift_txt,
+        einleitung=einleitung_txt,
+        daten=gespeicherte_bewertungen
+    )
 
 @app.route('/restaurant')
 def restaurant():

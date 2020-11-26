@@ -1,1 +1,50 @@
-{"Bewertung Kunde": {"vorspeise": "Salat", "aussehen_vorspeise": "3", "geschmack vorspeise": "3", "menge vorspeise": "3", "hauptspeise": "Pizza", "aussehen hauptspeise": "3", "geschmack hauptspeise": "3", "menge hauptspeise": "3", "dessert": "Sorbet", "aussehen dessert": "3", "geschmack dessert": "3", "menge dessert": "3", "service": "3", "anmerkungen": "a"}}
+[
+    {
+        "vorspeise": "Salat",
+        "aussehen_vorspeise": "5",
+        "geschmack vorspeise": "5",
+        "menge vorspeise": "5",
+        "hauptspeise": "Pizza",
+        "aussehen hauptspeise": "5",
+        "geschmack hauptspeise": "5",
+        "menge hauptspeise": "5",
+        "dessert": "Sorbet",
+        "aussehen dessert": "5",
+        "geschmack dessert": "5",
+        "menge dessert": "5",
+        "service": "5",
+        "anmerkungen": ""
+    },
+    {
+        "vorspeise": "Salat",
+        "aussehen_vorspeise": "3",
+        "geschmack vorspeise": "3",
+        "menge vorspeise": "3",
+        "hauptspeise": "Pizza",
+        "aussehen hauptspeise": "3",
+        "geschmack hauptspeise": "3",
+        "menge hauptspeise": "3",
+        "dessert": "Sorbet",
+        "aussehen dessert": "3",
+        "geschmack dessert": "3",
+        "menge dessert": "3",
+        "service": "3",
+        "anmerkungen": ""
+    },
+    {
+        "vorspeise": "Suppe",
+        "aussehen_vorspeise": "5",
+        "geschmack vorspeise": "3",
+        "menge vorspeise": "3",
+        "hauptspeise": "Pizza",
+        "aussehen hauptspeise": "3",
+        "geschmack hauptspeise": "3",
+        "menge hauptspeise": "3",
+        "dessert": "Sorbet",
+        "aussehen dessert": "3",
+        "geschmack dessert": "3",
+        "menge dessert": "3",
+        "service": "5",
+        "anmerkungen": "hallo"
+    }
+]
