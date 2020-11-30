@@ -57,6 +57,7 @@ def eingabe():
         desserts=['Sorbet', 'Tiramisu', 'Käse']
     )
 
+
 @app.route('/liste')
 def liste():
     gespeicherte_bewertungen = laden()
@@ -70,17 +71,27 @@ def liste():
         daten=gespeicherte_bewertungen
     )
 
+
 @app.route('/restaurant')
 def restaurant():
     ueberschrift_txt = "Willkommen im Restaurant Hirschen"
     einleitung_txt = "Hier finden Sie unsere aktuelle Speisekarte"
-    return render_template('start.html', app_name="Restaurant", ueberschrift=ueberschrift_txt, einleitung=einleitung_txt)
+    return render_template('start.html', app_name="Restaurant", ueberschrift=ueberschrift_txt,
+                           einleitung=einleitung_txt, )
 
 
 @app.route('/about')
 def about():
     ueberschrift_txt = "Über diese Web-App"
-    einleitung_txt = "Diese App wurde als Demo App programmiert"
+    einleitung_txt = "Diese App wurde im Rahmen der Semesterarbeit für das Modul Programmieren 2 des " \
+                     "Studiengangs Digital Business Management an der Fachhochschule Graubünden programmiert. " \
+                     "Das Ziel der Arbeit ist es, eine Web-Applikation zu programmieren, die Daten aufnimmt, " \
+                     "diese verarbeitet und schlussendlich wieder ausgibt. Die vorliegende Web-App soll den Gästen" \
+                     "vom Restaurant Hirschen die Möglichkeit geben, ihre bestellten Speisen zu bewerten. Diese Bewertung" \
+                     "wiederum dient dem Wirt des Restaurants, seine Leistung stetig zu verbessern und seine Gäste" \
+                     "zufriedenzustellen. " \
+                     "Das Programm wurde geschrieben von: " \
+                     "Simone Kühne, Morgartenstrasse 1, 6315 Oberägeri."
     return render_template('start.html', app_name="About", ueberschrift=ueberschrift_txt, einleitung=einleitung_txt)
 
 
