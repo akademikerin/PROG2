@@ -6,146 +6,198 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap/bootstrap.min.css') }}">
 
 </head>
+<header>
+<div class="card text-center">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/eingabe">Eingabe</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/restaurant">Restaurant</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/liste">Liste</a>
+      </li>
+    </ul>
+  </div>
+</div>
+</header>
+
 <body>
     <h1>{{ ueberschrift }}</h1>
     <p>{{ einleitung }}</p>
 
     <form method="post">
+    <div class="container p-3 my-3 bg-dark text-white">
+        <div class="row">
+            <div class="col-sm-3">
+                <h4>Was hatten Sie zur Vorspeise?</h4>
+                <select name="eingabe_vorspeisen" id="vorspeise">
+                    {% for vorspeise in vorspeisen %}
+                  <option value="{{ vorspeise }}">{{ vorspeise }}</option>
+                    {% endfor %}
+                </select>
+                <br>
+                <br>
+                <h5>Wie bewerten Sie das Aussehen der Vorspeise?</h5>
+                <a>1 = sehr schlecht</a>
+                <br>
+                <a>5 = sehr gut</a>
+                <br>
+                <input type="range" name="sterne_aussehen_vorspeise" min="1" max="5">
+                <br>
+                <a>1 -- 2 -- 3 -- 4 -- 5</a>
+                <br>
+                <br>
+                <h5>Wie bewerten Sie den Geschmack der Vorspeise?</h5>
+                <a>1 = sehr schlecht</a>
+                <br>
+                <a>5 = sehr gut</a>
+                <br>
+                <input type="range" name="sterne_geschmack_vorspeise" min="1" max="5">
+                <br>
+                <a>1 -- 2 -- 3 -- 4 -- 5</a>
+                <br>
+                <br>
+                <h5>Wie bewerten Sie die Menge der Vorspeise?</h5>
+                <a>1 = viel zu wenig</a>
+                <br>
+                <a>3 = genau richtig</a>
+                <br>
+                <a>5 = viel zu viel</a>
+                <br>
+                <input type="range" name="sterne_menge_vorspeise" min="1" max="5">
+                <br>
+                <a>1 -- 2 -- 3 -- 4 -- 5</a>
+            </div>
 
-        <h4>Was hatten Sie zur Vorspeise?</h4>
-        <select name="eingabe_vorspeisen" id="vorspeise">
-            {% for vorspeise in vorspeisen %}
-          <option value="{{ vorspeise }}">{{ vorspeise }}</option>
-            {% endfor %}
-        </select>
-        <br>
-        <h5>Wie bewerten Sie das Aussehen der Vorspeise?</h5>
-        <a>1 = sehr schlecht</a>
-        <br>
-        <a>5 = sehr gut</a>
-        <br>
-        <input type="range" name="sterne_aussehen_vorspeise" min="1" max="5">
-        <br>
-        <a>1 --- 2 --- 3 --- 4 --- 5</a>
-        <br>
-        <br>
-        <h5>Wie bewerten Sie den Geschmack der Vorspeise?</h5>
-        <a>1 = sehr schlecht</a>
-        <br>
-        <a>5 = sehr gut</a>
-        <br>
-        <input type="range" name="sterne_geschmack_vorspeise" min="1" max="5">
-        <br>
-        <a>1 --- 2 --- 3 --- 4 --- 5</a>
-        <br>
-        <br>
-        <h5>Wie bewerten Sie die Menge der Vorspeise?</h5>
-        <a>1 = viel zu wenig</a>
-        <br>
-        <a>3 = genau richtig</a>
-        <br>
-        <a>5 = viel zu viel</a>
-        <br>
-        <input type="range" name="sterne_menge_vorspeise" min="1" max="5">
-        <br>
-        <a>1 --- 2 --- 3 --- 4 --- 5</a>
-        <br>
-        <br>
 
-        <h4>Was hatten Sie zur Hauptspeise?</h4>
-        <select name="eingabe_hauptspeisen" id="hauptspeise">
-            {% for hauptspeise in hauptspeisen %}
-          <option value="{{ hauptspeise }}">{{ hauptspeise }}</option>
-            {% endfor %}
-        </select>
-        <br>
-        <h5>Wie bewerten Sie das Aussehen der Hauptspeise?</h5>
-        <a>1 = sehr schlecht</a>
-        <br>
-        <a>5 = sehr gut</a>
-        <br>
-        <input type="range" name="sterne_aussehen_hauptspeise" min="1" max="5">
-        <br>
-        <a>1 --- 2 --- 3 --- 4 --- 5</a>
-        <br>
-        <br>
-        <h5>Wie bewerten Sie den Geschmack der Hauptspeise?</h5>
-        <a>1 = sehr schlecht</a>
-        <br>
-        <a>5 = sehr gut</a>
-        <br>
-        <input type="range" name="sterne_geschmack_hauptspeise" min="1" max="5">
-        <br>
-        <a>1 --- 2 --- 3 --- 4 --- 5</a>
-        <br>
-        <br>
-        <h5>Wie bewerten Sie die Menge der Hauptspeise?</h5>
-        <a>1 = viel zu wenig</a>
-        <br>
-        <a>3 = genau richtig</a>
-        <br>
-        <a>5 = viel zu viel</a>
-        <br>
-        <input type="range" name="sterne_menge_hauptspeise" min="1" max="5">
-        <br>
-        <a>1 --- 2 --- 3 --- 4 --- 5</a>
-        <br>
-        <br>
+            <div class="col-sm-3">
+                <h4>Was hatten Sie zur Hauptspeise?</h4>
+                <select name="eingabe_hauptspeisen" id="hauptspeise">
+                    {% for hauptspeise in hauptspeisen %}
+                  <option value="{{ hauptspeise }}">{{ hauptspeise }}</option>
+                    {% endfor %}
+                </select>
+                <br>
+                <br>
+                <h5>Wie bewerten Sie das Aussehen der Hauptspeise?</h5>
+                <a>1 = sehr schlecht</a>
+                <br>
+                <a>5 = sehr gut</a>
+                <br>
+                <input type="range" name="sterne_aussehen_hauptspeise" min="1" max="5">
+                <br>
+                <a>1 -- 2 -- 3 -- 4 -- 5</a>
+                <br>
+                <br>
+                <h5>Wie bewerten Sie den Geschmack der Hauptspeise?</h5>
+                <a>1 = sehr schlecht</a>
+                <br>
+                <a>5 = sehr gut</a>
+                <br>
+                <input type="range" name="sterne_geschmack_hauptspeise" min="1" max="5">
+                <br>
+                <a>1 -- 2 -- 3 -- 4 -- 5</a>
+                <br>
+                <br>
+                <h5>Wie bewerten Sie die Menge der Hauptspeise?</h5>
+                <a>1 = viel zu wenig</a>
+                <br>
+                <a>3 = genau richtig</a>
+                <br>
+                <a>5 = viel zu viel</a>
+                <br>
+                <input type="range" name="sterne_menge_hauptspeise" min="1" max="5">
+                <br>
+                <a>1 -- 2 -- 3 -- 4 -- 5</a>
+            </div>
 
-        <h4>Was hatten Sie zum Dessert?</h4>
-        <select name="eingabe_desserts" id="dessert">
-            {% for dessert in desserts %}
-          <option value="{{ dessert }}">{{ dessert }}</option>
-            {% endfor %}
-        </select>
-        <br>
-        <h5>Wie bewerten Sie das Aussehen des Desserts?</h5>
-        <a>1 = sehr schlecht</a>
-        <br>
-        <a>5 = sehr gut</a>
-        <br>
-        <input type="range" name="sterne_aussehen_dessert" min="1" max="5">
-        <br>
-        <a>1 --- 2 --- 3 --- 4 --- 5</a>
-        <br>
-        <br>
-        <h5>Wie bewerten Sie den Geschmack des Desserts?</h5>
-        <a>1 = sehr schlecht</a>
-        <br>
-        <a>5 = sehr gut</a>
-        <br>
-        <input type="range" name="sterne_geschmack_dessert" min="1" max="5">
-        <br>
-        <a>1 --- 2 --- 3 --- 4 --- 5</a>
-        <br>
-        <br>
-        <h5>Wie bewerten Sie die Menge des Desserts?</h5>
-        <a>1 = viel zu wenig</a>
-        <br>
-        <a>3 = genau richtig</a>
-        <br>
-        <a>5 = viel zu viel</a>
-        <br>
-        <input type="range" name="sterne_menge_dessert" min="1" max="5">
-        <br>
-        <a>1 --- 2 --- 3 --- 4 --- 5</a>
-        <br>
-        <br>
-        <h4>Wie bewerten Sie den Service?</h4>
-        <a>1 = sehr schlecht</a>
-        <br>
-        <a>5 = sehr gut</a>
-        <br>
-        <input type="range" name="sterne_service" min="1" max="5">
-        <br>
-        <a>1 --- 2 --- 3 --- 4 --- 5</a>
-        <br>
-        <br>
-        <h4>Sonstige Anmerkungen, Fragen, Rückmeldungen:</h4>
-        <input type="text" name="anmerkungen" placeholder="Bitte eingeben">
-        <br>
-        <br>
-        <button type="submit">Bewertung speichern</button>
+
+            <div class="col-sm-3">
+                <h4>Was hatten Sie zum Dessert?</h4>
+                <select name="eingabe_desserts" id="dessert">
+                    {% for dessert in desserts %}
+                  <option value="{{ dessert }}">{{ dessert }}</option>
+                    {% endfor %}
+                </select>
+                <br>
+                <br>
+                <h5>Wie bewerten Sie das Aussehen des Desserts?</h5>
+                <a>1 = sehr schlecht</a>
+                <br>
+                <a>5 = sehr gut</a>
+                <br>
+                <input type="range" name="sterne_aussehen_dessert" min="1" max="5">
+                <br>
+                <a>1 -- 2 -- 3 -- 4 -- 5</a>
+                <br>
+                <br>
+                <h5>Wie bewerten Sie den Geschmack des Desserts?</h5>
+                <a>1 = sehr schlecht</a>
+                <br>
+                <a>5 = sehr gut</a>
+                <br>
+                <input type="range" name="sterne_geschmack_dessert" min="1" max="5">
+                <br>
+                <a>1 -- 2 -- 3 -- 4 -- 5</a>
+                <br>
+                <br>
+                <h5>Wie bewerten Sie die Menge des Desserts?</h5>
+                <a>1 = viel zu wenig</a>
+                <br>
+                <a>3 = genau richtig</a>
+                <br>
+                <a>5 = viel zu viel</a>
+                <br>
+                <input type="range" name="sterne_menge_dessert" min="1" max="5">
+                <br>
+                <a>1 -- 2 -- 3 -- 4 -- 5</a>
+            </div>
+
+
+            <div class="col-sm-3">
+                <h4>Wie bewerten Sie den Service?</h4>
+                <a>1 = sehr schlecht</a>
+                <br>
+                <a>5 = sehr gut</a>
+                <br>
+                <input type="range" name="sterne_service" min="1" max="5">
+                <br>
+                <a>1 -- 2 -- 3 -- 4 -- 5</a>
+                <br>
+                <br>
+                <h4>Sonstige Anmerkungen, Fragen, Rückmeldungen:</h4>
+                <input type="text" name="anmerkungen" placeholder="Bitte eingeben">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <button type="submit">Bewertung speichern</button>
+            </div>
+        </div>
+    </div>
     </form>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

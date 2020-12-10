@@ -1,7 +1,6 @@
 from flask import Flask
 from flask import render_template
 from flask import request
-from flask import url_for
 
 from daten import speichern, laden
 
@@ -49,8 +48,7 @@ def eingabe():
                              }
         antwort = speichern(bewertungseingabe)
         return 'Gespeicherte Daten:' + str(bewertungseingabe) + ' <br>' + str(antwort)
-    return render_template(
-        'eingabe.html',
+    return render_template('eingabe.html',
         app_name="Bewertung abgeben",
         vorspeisen=['Salat', 'Suppe', 'Tatar'],
         hauptspeisen=['Pizza', 'Pasta', 'Risotto'],
@@ -77,7 +75,7 @@ def restaurant():
     ueberschrift_txt = "Willkommen im Restaurant Hirschen"
     einleitung_txt = "Hier finden Sie unsere aktuelle Speisekarte"
     return render_template('start.html', app_name="Restaurant", ueberschrift=ueberschrift_txt,
-                           einleitung=einleitung_txt, )
+                           einleitung=einleitung_txt,)
 
 
 @app.route('/about')
