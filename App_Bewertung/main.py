@@ -63,17 +63,28 @@ def liste():
     einleitung_txt = 'Hier wird Ihre Bewertung zu den bestellten Speisen aufgelistet.'
     return render_template(
         'liste.html',
-        app_name="Restaurant",
+        app_name="Liste",
         ueberschrift=ueberschrift_txt,
         einleitung=einleitung_txt,
         daten=gespeicherte_bewertungen
     )
+
+@app.route('/statistik')
+def statistik():
+    ueberschrift_txt = 'Statistik'
+    einleitung_txt = 'Blabla'
+    return render_template(
+        'start.html',
+        app_name="Statistik",
+        ueberschrift=ueberschrift_txt,
+        einleitung=einleitung_txt)
 
 
 @app.route('/restaurant')
 def restaurant():
     ueberschrift_txt = "Willkommen im Restaurant Hirschen"
     einleitung_txt = "Hier finden Sie unsere aktuelle Speisekarte"
+
     return render_template('start.html', app_name="Restaurant", ueberschrift=ueberschrift_txt,
                            einleitung=einleitung_txt,)
 
@@ -91,6 +102,7 @@ def about():
                      "Das Programm wurde geschrieben von: " \
                      "Simone Kühne, Morgartenstrasse 1, 6315 Oberägeri."
     return render_template('start.html', app_name="About", ueberschrift=ueberschrift_txt, einleitung=einleitung_txt)
+
 
 
 if __name__ == "__main__":

@@ -31,6 +31,9 @@
       <li class="nav-item">
         <a class="nav-link " href="/liste">Liste</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/statistik">Statistik</a>
+      </li>
     </ul>
   </div>
 </div>
@@ -40,28 +43,18 @@
     <h1>{{ ueberschrift }}</h1>
     <p>{{ einleitung }}</p>
 
-    <a href="{{ url_for('eingabe') }}">Jetzt Bewertung abgeben</a>
+
+    <a class="btn btn-outline-dark" href="{{ url_for('eingabe') }}" role="button">Jetzt Bewertung abgeben</a>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}" ></script>
 
-<footer>
-    <div class="row">
-        <div class="col-md-3">
-           Simone Kühne
-        </div>
-        <div class="col-md-3">
-           PRO2
-        </div>
-        <div class="col-md-3">
-           DBM19VZ
-        </div>
-        <div class="col-md-3">
-           2020
-        </div>
-    </div>
-</footer>
+
+<div class="card-footer text-muted">
+Simone Kühne | PRO2 | DBM19VZ | 2020
+</div>
+
 
 </body>
 

@@ -2,25 +2,16 @@ h1 {
     color: green;
 }
 
-.button1{
-background-color: #008CBA;
-border: none;
-color: white;
-text-align: center;
-font-size: 18px;
+p {
+    text-align: center;
 }
 
-.container{
-    background-color: green;
-}
 
-.footer {
-  position: fixed;
-  left: 0;
+footer {
+  position: absolute;
   bottom: 0;
   width: 100%;
   background-color: red;
-  color: white;
   text-align: center;
 }
 
