@@ -1,47 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ app_name }}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap/bootstrap.min.css') }}">
+{% extends 'layout.html' %}
+{% block content %}
+<h1>{{ ueberschrift }}</h1>
+<p>{{ einleitung }}</p>
 
-</head>
-<header>
-<div class="card text-center">
-  <div class="card-header">
-    <ul class="nav nav-tabs card-header-tabs">
-      <li class="nav-item">
-        <a class="nav-link active" href="/">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/eingabe">Eingabe</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link " href="/restaurant">Restaurant</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link " href="/about">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link " href="/liste">Liste</a>
-      </li>
-    </ul>
-  </div>
-</div>
-</header>
-
-<body>
-    <h1>{{ ueberschrift }}</h1>
-    <p>{{ einleitung }}</p>
-
-    <form method="post">
+<form method="post">
     <div class="container p-3 my-3 bg-dark text-white">
         <div class="row">
             <div class="col-sm-3">
                 <h4>Was hatten Sie zur Vorspeise?</h4>
                 <select name="eingabe_vorspeisen" id="vorspeise">
                     {% for vorspeise in vorspeisen %}
-                  <option value="{{ vorspeise }}">{{ vorspeise }}</option>
+                    <option value="{{ vorspeise }}">{{ vorspeise }}</option>
                     {% endfor %}
                 </select>
                 <br>
@@ -83,7 +52,7 @@
                 <h4>Was hatten Sie zur Hauptspeise?</h4>
                 <select name="eingabe_hauptspeisen" id="hauptspeise">
                     {% for hauptspeise in hauptspeisen %}
-                  <option value="{{ hauptspeise }}">{{ hauptspeise }}</option>
+                    <option value="{{ hauptspeise }}">{{ hauptspeise }}</option>
                     {% endfor %}
                 </select>
                 <br>
@@ -125,7 +94,7 @@
                 <h4>Was hatten Sie zum Dessert?</h4>
                 <select name="eingabe_desserts" id="dessert">
                     {% for dessert in desserts %}
-                  <option value="{{ dessert }}">{{ dessert }}</option>
+                    <option value="{{ dessert }}">{{ dessert }}</option>
                     {% endfor %}
                 </select>
                 <br>
@@ -198,10 +167,13 @@
             </div>
         </div>
     </div>
-    </form>
+</form>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}" ></script>
-</body>
-</html>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+{% endblock %}

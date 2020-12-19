@@ -14,9 +14,8 @@ def start():
     return render_template('start.html', app_name="Bewertung", ueberschrift=ueberschrift_txt, einleitung=einleitung_txt)
 
 
-@app.route('/eingabe', methods=['POST', 'GET'])
-def eingabe():
-    if request.method == 'POST':
+@app.route('/eingabe', methods=['POST'])
+def eingabe_post():
         vorspeise = request.form['eingabe_vorspeisen']
         bewertung_aussehen_vorspeise = request.form['sterne_aussehen_vorspeise']
         bewertung_geschmack_vorspeise = request.form['sterne_geschmack_vorspeise']
@@ -47,13 +46,16 @@ def eingabe():
                              "anmerkungen": anmerkungen
                              }
         antwort = speichern(bewertungseingabe)
-        return 'Gespeicherte Daten:' + str(bewertungseingabe) + ' <br>' + str(antwort)
+        return start()
+
+@app.route('/eingabe', methods=['GET'])
+def eingabe_request():
     return render_template('eingabe.html',
-        app_name="Bewertung abgeben",
-        vorspeisen=['Salat', 'Suppe', 'Tatar'],
-        hauptspeisen=['Pizza', 'Pasta', 'Risotto'],
-        desserts=['Sorbet', 'Tiramisu', 'Käse']
-    )
+                           app_name="Bewertung abgeben",
+                           vorspeisen=['Salat', 'Suppe', 'Tatar'],
+                           hauptspeisen=['Pizza', 'Pasta', 'Risotto'],
+                           desserts=['Sorbet', 'Tiramisu', 'Käse']
+                           )
 
 
 @app.route('/liste')

@@ -1,62 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>{{ app_name }}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap/bootstrap.min.css') }}">
-
-    <meta charset="UTF-8">
-    <meta name="author" content="Simone Kühne"/>
-    <meta name="description" content="Bewertungs-Website">
-    <meta name="keywords" content="Bewertung,Restaurant,DBM,FHGR">
-    <meta name="date" content="11.11.2020">
-
-</head>
-<body>
-<header>
-<div class="card text-center">
-  <div class="card-header">
-    <ul class="nav nav-tabs card-header-tabs">
-      <li class="nav-item">
-        <a class="nav-link active" href="/">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/eingabe">Eingabe</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link " href="/restaurant">Restaurant</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link " href="/about">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link " href="/liste">Liste</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link " href="/statistik">Statistik</a>
-      </li>
-    </ul>
-  </div>
-</div>
-</header>
+{% extends 'layout.html' %}
+{% block content %}
+<h1>{{ ueberschrift }}</h1>
+<p>{{ einleitung }}</p>
 
 
-    <h1>{{ ueberschrift }}</h1>
-    <p>{{ einleitung }}</p>
+<a class="btn btn-outline-dark" href="{{ url_for('eingabe_request') }}" role="button">Jetzt Bewertung abgeben</a>
 
-
-    <a class="btn btn-outline-dark" href="{{ url_for('eingabe') }}" role="button">Jetzt Bewertung abgeben</a>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}" ></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
 
 
 <div class="card-footer text-muted">
-Simone Kühne | PRO2 | DBM19VZ | 2020
+    Simone Kühne | PRO2 | DBM19VZ | 2020
 </div>
 
+{% endblock %}
 
-</body>
 
 
-</html>
