@@ -62,5 +62,37 @@
         "menge dessert": "4",
         "service": "5",
         "anmerkungen": ""
+    },
+    {
+        "vorspeise": "Lachsforellenfilet",
+        "aussehen_vorspeise": "3",
+        "geschmack vorspeise": "3",
+        "menge vorspeise": "3",
+        "hauptspeise": "Lammcarr\u00e9 mit Perlcouscous",
+        "aussehen hauptspeise": "3",
+        "geschmack hauptspeise": "3",
+        "menge hauptspeise": "3",
+        "dessert": "Schoggi-Mille feuille",
+        "aussehen dessert": "3",
+        "geschmack dessert": "3",
+        "menge dessert": "3",
+        "service": "3",
+        "anmerkungen": ""
+    },
+    {
+        "vorspeise": "Lachsforellenfilet",
+        "aussehen_vorspeise": "3",
+        "geschmack vorspeise": "3",
+        "menge vorspeise": "3",
+        "hauptspeise": "Lammcarr\u00e9 mit Perlcouscous",
+        "aussehen hauptspeise": "3",
+        "geschmack hauptspeise": "3",
+        "menge hauptspeise": "3",
+        "dessert": "Schoggi-Mille feuille",
+        "aussehen dessert": "3",
+        "geschmack dessert": "3",
+        "menge dessert": "3",
+        "service": "3",
+        "anmerkungen": ""
     }
 ]
