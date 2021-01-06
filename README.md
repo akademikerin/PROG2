@@ -18,11 +18,11 @@ Datenausgabe:
 
 # Visuelle Darstellung
 Speisen auswählen und bewerten:
-![Bild1](Bild1.jpg)
+![Bild1](App_Bewertung/Bild1.jpg)
 
 Auswertung / Statistik:
-![Bild2](Bild2.jpg)
+![Bild2](App_Bewertung/Bild2.jpg)
 
 # Flowchart
 Szenario 1 - Eingabe Gast
-![Flowchart](Flowchart.jpg)
+![Flowchart](App_Bewertung/Flowchart.jpg)
