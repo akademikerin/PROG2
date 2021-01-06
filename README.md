@@ -1,12 +1,9 @@
-# Projekt "Restaurant Hirschen"
+# Programmieren 2
 
-**Ausgangslage**
-Das Restaurant Hirschen in Oberägeri wird regelmässig von vielen Gästen besucht. Die Speisekarte ist relativ überschaubar, dennoch scheinen die Gerichte bzw. die Auswahl gut bei den Gästen anzukommen.
+Diese Semesterarbeit ist Bestandteil des Leistungsnachweises für das Modul "PRO2" im Studiengang Digital Business Management. 
 
-
-**Projektidee**
-Die Gäste sollen nach ihrem Besuch die Möglichkeit haben, für ihre ausgewählte Speisen online eine Bewertung abzugeben. Sie sollen dabei Sterne von 1 bis 5 vergeben können und zusätzlich einen Kommentar eingeben, falls erwünscht. Die generierten Daten zeigen dann auf, welche Gerichte besonders gut bei den Gästen angekommen sind und welche weniger. Diese Auswertung soll dem Restaurant helfen, ihre Leistung zu verbessern.
-
+**Projektidee:**
+Das Restaurant Hirschen in Oberägeri wird regelmässig von vielen Gästen besucht. Die Gäste sollen nach ihrem Besuch die Möglichkeit haben, für ihre ausgewählte Speisen online eine Bewertung abzugeben. Sie sollen dabei Sterne von 1 bis 5 vergeben können und zusätzlich einen Kommentar eingeben, falls erwünscht. Mit den generierten Daten werden dann die Durchschnittsbewertungen pro Speise und pro Kategorie berechnet und graphisch dargestellt. Diese Auswertung soll dem Restaurant helfen, ihre Leistung zu verbessern.
 
 **Workflow**
 Dateneingabe: 
@@ -14,23 +11,20 @@ Dateneingabe:
 > * Bewertung der Speisen (Sternesystem plus Kommentarfunktion)
 	
 Datenverarbeitung / Speicherung:
-> * Auswertung der Bewertungsdaten - durchschnittliche Bewertung der Speise + Auflistung der Kommentare
+> * Auswertung der Bewertungsdaten - durchschnittliche Bewertung der Speise pro Kategorie + Auflistung der Kommentare
 	
 Datenausgabe:
-> * Auswertung soll als Excel File herausgegeben werden
+> * Auswertung soll als Balkendiagramm dargestellt werden
 
 
 # Visuelle Darstellung
-Ansicht Gast - Speisen auswählen:
-![Bild1](Bild1.png)
+Speisen auswählen und bewerten:
+![Bild1](Bild1.jpg)
 
-Ansicht Gast - Bewertung der Speisen:
-![Bild2](Bild2.png)
+Auswertung / Statistik:
+![Bild2](Bild2.jpg)
 
 
 # Flowchart
 Szenario 1 - Eingabe Gast
 ![Szenario1](Szenario1.png)
-
-
-    
