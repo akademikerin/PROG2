@@ -3,8 +3,23 @@
 <h1>{{ ueberschrift }}</h1>
 <p>{{ einleitung }}</p>
 
+<p>
 {% for eintrag in daten %}
-{{ eintrag[0] }} {{ eintrag[1] }}Sterne<br>
+Vorspeise: {{ eintrag['vorspeise'] }} Sterne <br>
+Aussehen: {{eintrag['aussehen_vorspeise']}} Sterne<br>
+Menge: {{eintrag['menge vorspeise']}} Sterne <br/>
+Geschmack: {{eintrag['geschmack vorspeise']}} Sterne <br><br>
+
+Hauptspeise: {{eintrag['hauptspeise']}} Sterne <br>
+Aussehen: {{eintrag['aussehen hauptspeise']}} Sterne<br>
+Menge: {{eintrag['menge hauptspeise']}} Sterne <br>
+Geschmack: {{eintrag['geschmack hauptspeise']}} Sterne <br><br>
+
+Dessert: {{eintrag['dessert']}} Sterne <br>
+Aussehen: {{eintrag['aussehen dessert']}} Sterne<br>
+Menge: {{eintrag['menge dessert']}} Sterne <br>
+Geschmack: {{eintrag['geschmack dessert']}} Sterne <br><br>
 {% endfor %}
+</p>
 
 {% endblock %}

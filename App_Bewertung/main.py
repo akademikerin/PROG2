@@ -2,11 +2,9 @@ from flask import Flask
 from flask import render_template
 from flask import request
 
-import plotly.express as px
 import plotly.graph_objects as go
-import pandas
 
-from daten import speichern, laden, alle_bewertungen_lesen
+from daten import speichern, laden
 
 app = Flask("bewertung")
 
