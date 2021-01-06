@@ -16,16 +16,13 @@ Datenverarbeitung / Speicherung:
 Datenausgabe:
 > * Auswertung soll als Balkendiagramm dargestellt werden
 
-
 # Visuelle Darstellung
 Speisen auswählen und bewerten:
-<img src="./Bild1.jpg">
-
+![Bild1](Bild1.jpg)
 
 Auswertung / Statistik:
 ![Bild2](Bild2.jpg)
 
-
 # Flowchart
 Szenario 1 - Eingabe Gast
-![Szenario1](Szenario1.png)
+![Flowchart](Flowchart.jpg)
