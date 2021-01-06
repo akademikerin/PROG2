@@ -137,10 +137,13 @@ def statistik():
 
     vorspeisen_diagramm = generiere_diagram(aussehen_vorspeise, geschmack_vorspeise, menge_vorspeise)
     hauptspeise_diagramm = generiere_diagram(aussehen_hauptspeise, geschmack_hauptspeise, menge_hauptspeise)
-    dessert_diagramm = generiere_diagram(aussehen_dessert, geschmack_dessert, menge_dessert, )
+    dessert_diagramm = generiere_diagram(aussehen_dessert, geschmack_dessert, menge_dessert)
+
     vorspeisen_diagramm = vorspeisen_diagramm.to_json()
     hauptspeise_diagramm = hauptspeise_diagramm.to_json()
     dessert_diagramm = dessert_diagramm.to_json()
+
+
 
     ueberschrift_txt = 'Statistik'
     einleitung_txt = 'Besten Dank für Ihre Bewertung. ' \

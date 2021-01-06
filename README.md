@@ -15,6 +15,7 @@ Datenverarbeitung / Speicherung:
 	
 Datenausgabe:
 > * Auswertung soll als Balkendiagramm dargestellt werden
+<<<<<<< HEAD
 
 
 # Visuelle Darstellung
@@ -23,8 +24,20 @@ Speisen auswählen und bewerten:
 
 Auswertung / Statistik:
 ![Bild2](Bild2.jpg)
+=======
 
+# Visuelle Darstellung
+Speisen auswählen und bewerten:
+![Bild1](App_Bewertung/Bild1.jpg)
+>>>>>>> 5437b6a4e3810010b031fc423154d3abe48c929e
+
+Auswertung / Statistik:
+![Bild2](App_Bewertung/Bild2.jpg)
 
 # Flowchart
 Szenario 1 - Eingabe Gast
+<<<<<<< HEAD
 ![Flowchart](Flowchart.jpg)
+=======
+![Flowchart](App_Bewertung/Flowchart.jpg)
+>>>>>>> 5437b6a4e3810010b031fc423154d3abe48c929e
