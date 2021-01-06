@@ -94,5 +94,53 @@
         "menge dessert": "3",
         "service": "3",
         "anmerkungen": ""
+    },
+    {
+        "vorspeise": "Lachsforellenfilet",
+        "aussehen_vorspeise": "3",
+        "geschmack vorspeise": "3",
+        "menge vorspeise": "3",
+        "hauptspeise": " Entenbrust mit Preiselbeerjus",
+        "aussehen hauptspeise": "5",
+        "geschmack hauptspeise": "4",
+        "menge hauptspeise": "2",
+        "dessert": "Schoggi-Mille feuille",
+        "aussehen dessert": "3",
+        "geschmack dessert": "3",
+        "menge dessert": "3",
+        "service": "3",
+        "anmerkungen": ""
+    },
+    {
+        "vorspeise": "Steinpilzcr\u00e8mesuppe",
+        "aussehen_vorspeise": "3",
+        "geschmack vorspeise": "3",
+        "menge vorspeise": "3",
+        "hauptspeise": "Lammcarr\u00e9 mit Perlcouscous",
+        "aussehen hauptspeise": "3",
+        "geschmack hauptspeise": "3",
+        "menge hauptspeise": "3",
+        "dessert": "Schoggi-Mille feuille",
+        "aussehen dessert": "3",
+        "geschmack dessert": "3",
+        "menge dessert": "3",
+        "service": "3",
+        "anmerkungen": ""
+    },
+    {
+        "vorspeise": "Steinpilzcr\u00e8mesuppe",
+        "aussehen_vorspeise": "3",
+        "geschmack vorspeise": "3",
+        "menge vorspeise": "3",
+        "hauptspeise": "Lammcarr\u00e9 mit Perlcouscous",
+        "aussehen hauptspeise": "3",
+        "geschmack hauptspeise": "3",
+        "menge hauptspeise": "3",
+        "dessert": "Schoggi-Mille feuille",
+        "aussehen dessert": "3",
+        "geschmack dessert": "3",
+        "menge dessert": "3",
+        "service": "3",
+        "anmerkungen": ""
     }
 ]

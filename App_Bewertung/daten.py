@@ -40,5 +40,3 @@ def laden():
     bewertungen = alle_bewertungen_lesen()
 
     return bewertungen
-
-

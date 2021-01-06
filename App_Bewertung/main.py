@@ -84,10 +84,10 @@ def liste():
 
 @app.route('/statistik')
 def statistik():
-    '''
+    """
     Erstellt ein plotly diagram mit allen bewertungen.
     :return: seite mit gerendertem plotly diagram.
-    '''
+    """
     aussehen_vorspeise = dict()
     geschmack_vorspeise = dict()
     menge_vorspeise = dict()
@@ -102,7 +102,7 @@ def statistik():
     service = list()
 
     bewertungen = laden()
-    # eien bewertung ins "tabellenformat" kopieren.
+    # eine bewertung ins "tabellenformat" kopieren.
     # key = art der vorspeise
     # Value = liste der einzelnen bewertungen
     for eine_bewertung in bewertungen:
@@ -185,7 +185,6 @@ def generiere_diagram(bewertungen_aussehen, bewertungen_geschmack, bewertungen_m
     diagramm.add_trace(go.Bar(x=vorspeisen_typen, y=resultate_menge, name="Menge"))
     diagramm.update_layout(barmode='group')
     return diagramm
-
 
 
 @app.route('/about')
