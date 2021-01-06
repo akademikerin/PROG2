@@ -22,6 +22,7 @@ def speichern(bewertungseingabe):
 
     return "Vielen Dank. Ihre Daten wurden gespeichert."
 
+
 def alle_bewertungen_lesen():
     """
         Liest alle bewertungen aus dem file und gibt diese zurück.
@@ -37,13 +38,5 @@ def alle_bewertungen_lesen():
 
 def laden():
     bewertungen = alle_bewertungen_lesen()
-
-    try:
-        with open("datenbank.json", "r") as datenbank:
-            bewertungen.append(bewertungseingabe)
-            json.dump(bewertungen, datenbank, indent=4)
-
-    except:
-        return "Datenbank konnte nicht geöffnet/erweitert werden."
 
     return bewertungen

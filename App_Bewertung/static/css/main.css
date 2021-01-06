@@ -1,17 +1,23 @@
 h1 {
-    color: green;
+    color: #0066ff;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 p {
-    text-align: center;
+    margin-left: 25px;
+    margin-right: 25px;
 }
-
 
 footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-color: red;
-  text-align: center;
+  background-color: #ada397;
 }
+
+
+img {
+    width: 800px;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
 

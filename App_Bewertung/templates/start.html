@@ -1,10 +1,15 @@
 {% extends 'layout.html' %}
 {% block content %}
 <h1>{{ ueberschrift }}</h1>
-<p>{{ einleitung }}</p>
 
+<p>Bewerten Sie jetzt unsere Speisen - Durch Ihre Bewertung können wir uns stetig verbessern.<br>
+    Herzlichen Dank für's Mitmachen!</p>
 
-<a class="btn btn-outline-dark" href="{{ url_for('eingabe_request') }}" role="button">Jetzt Bewertung abgeben</a>
+<a class="btn btn-outline-dark ml-4" href="{{ url_for('eingabe_request') }}" role="button">Jetzt Bewertung abgeben</a>
+
+<div>
+    <img src="../static/hirschen.jpg" alt="Hirschen">
+</div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -14,10 +19,6 @@
         crossorigin="anonymous"></script>
 <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
 
-
-<div class="card-footer text-muted">
-    Simone Kühne | PRO2 | DBM19VZ | 2020
-</div>
 
 {% endblock %}
 

@@ -3,6 +3,8 @@
 <head>
     <title>{{ app_name }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
 
     <meta charset="UTF-8">
     <meta name="author" content="Simone Kühne"/>
@@ -13,31 +15,35 @@
 </head>
 <body>
 <header>
-<div class="card text-center">
-  <div class="card-header">
-    <ul class="nav nav-tabs card-header-tabs">
-      <li class="nav-item">
-        <a class="nav-link active" href="/">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/eingabe">Eingabe</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link " href="/restaurant">Restaurant</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link " href="/about">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link " href="/liste">Liste</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link " href="/statistik">Statistik</a>
-      </li>
-    </ul>
-  </div>
-</div>
+    <div class="card text-center">
+        <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/eingabe">Eingabe</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/liste">Liste</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/statistik">Statistik</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/about">About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </header>
+
+<footer class="fixed-bottom py-1">
+    <div class="container text-center">
+      Simone Kühne | PRO2 | DBM19VZ | 2020
+    </div>
+</footer>
+
 {% block content %} {% endblock %}
 </body>
 </html>
