@@ -56,9 +56,15 @@ def eingabe_post():
 def eingabe_request():
     return render_template('eingabe.html',
                            app_name="Bewertung abgeben",
-                           vorspeisen=['Salat', 'Suppe', 'Tatar'],
-                           hauptspeisen=['Pizza', 'Pasta', 'Risotto'],
-                           desserts=['Sorbet', 'Tiramisu', 'Käse']
+                           vorspeisen=['Lachsforellenfilet',
+                                       'Steinpilzcrèmesuppe',
+                                       'Nüsslisalat mit Ei'],
+                           hauptspeisen=['Lammcarré mit Perlcouscous',
+                                         ' Entenbrust mit Preiselbeerjus',
+                                         'Risotto mit Kürbisragout'],
+                           desserts=['Schoggi-Mille feuille',
+                                     'Zuger Kirschtorte',
+                                     'Käse mit Früchtebrot']
                            )
 
 
@@ -139,7 +145,7 @@ def statistik():
     dessert_diagramm = dessert_diagramm.to_json()
 
     ueberschrift_txt = 'Statistik'
-    einleitung_txt = 'Herzlichen Dank für Ihre Bewertung. ' \
+    einleitung_txt = 'Besten Dank für Ihre Bewertung. ' \
                      'Hier werden die durchschnittlichen Bewertungen pro Speise und pro Kategorie aufgeführt:'
     return render_template(
         'statistik.html',
