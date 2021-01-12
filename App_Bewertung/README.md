@@ -28,7 +28,7 @@ Datenausgabe:
 > * Auswertung soll als Balkendiagramm dargestellt werden
 
 **Walkthrough**
-> * Run Programm
+> * Programm starten
 > * Bewertung abgeben (Button)
 > * Speisen auswählen und bewerten
 > * Bewertung speichern (Button)
