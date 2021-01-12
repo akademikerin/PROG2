@@ -22,8 +22,8 @@ Speisen auswählen und bewerten:
 ![Bild1](https://github.com/akademikerin/PROG2/blob/master/App_Bewertung/images/Bild1.JPG)
 
 Auswertung / Statistik:
-![Bild2](/images/Bild2.jpg)
+![Bild2](https://github.com/akademikerin/PROG2/blob/master/App_Bewertung/images/Bild2.JPG)
 
 
 # Flowchart
-![Flowchart](/images/Flowchart.jpg)
+![Flowchart](https://github.com/akademikerin/PROG2/blob/master/App_Bewertung/images/Flowchart.JPG)
