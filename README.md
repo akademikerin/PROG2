@@ -22,8 +22,8 @@ Speisen auswählen und bewerten:
 ![Bild1](images/Bild1.jpg)
 
 Auswertung / Statistik:
-![Bild2](Bild2.jpg)
+![Bild2](images/Bild2.jpg)
 
 
 # Flowchart
-![Flowchart](Flowchart.jpg)
+![Flowchart](images/Flowchart.jpg)
