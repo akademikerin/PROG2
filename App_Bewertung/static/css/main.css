@@ -4,6 +4,13 @@ h1 {
     margin-right: 25px;
 }
 
+h2 {
+    color: grey;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: 25px;
+}
+
 p {
     margin-left: 25px;
     margin-right: 25px;

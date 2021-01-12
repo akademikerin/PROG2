@@ -97,6 +97,7 @@ def statistik():
     aussehen_dessert = dict()
     geschmack_dessert = dict()
     menge_dessert = dict()
+
     service = list()
 
     bewertungen = laden()
@@ -116,6 +117,7 @@ def statistik():
             aussehen_hauptspeise[hauptspeisen_typ] = list()
             geschmack_hauptspeise[hauptspeisen_typ] = list()
             menge_hauptspeise[hauptspeisen_typ] = list()
+
         if dessert_typ not in aussehen_vorspeise:
             aussehen_dessert[dessert_typ] = list()
             geschmack_dessert[dessert_typ] = list()
@@ -133,7 +135,7 @@ def statistik():
         geschmack_dessert[dessert_typ].append(int(eine_bewertung["geschmack dessert"]))
         menge_dessert[dessert_typ].append(int(eine_bewertung["menge dessert"]))
 
-        service.append(eine_bewertung["service"])
+        service.append(int(eine_bewertung["service"]))
 
     vorspeisen_diagramm = generiere_diagram(aussehen_vorspeise, geschmack_vorspeise, menge_vorspeise)
     hauptspeise_diagramm = generiere_diagram(aussehen_hauptspeise, geschmack_hauptspeise, menge_hauptspeise)
