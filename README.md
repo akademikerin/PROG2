@@ -15,12 +15,11 @@ Datenverarbeitung / Speicherung:
 	
 Datenausgabe:
 > * Auswertung soll als Balkendiagramm dargestellt werden
-<<<<<<< HEAD
 
 
 # Visuelle Darstellung
 Speisen auswählen und bewerten:
-![Bild1](Bild1.jpg)
+![Bild1](App_Bewertung/images/Bild1.jpg)
 
 Auswertung / Statistik:
 ![Bild2](Bild2.jpg)
