@@ -19,7 +19,7 @@ Datenausgabe:
 
 # Visuelle Darstellung
 Speisen auswählen und bewerten:
-![Bild1](/images/Bild1.jpg)
+![Bild1](https://github.com/akademikerin/PROG2/blob/master/App_Bewertung/images/Bild1.JPG)
 
 Auswertung / Statistik:
 ![Bild2](/images/Bild2.jpg)
