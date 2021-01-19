@@ -21,15 +21,17 @@ def eingabe_post():
     bewertung_aussehen_vorspeise = request.form['sterne_aussehen_vorspeise']
     bewertung_geschmack_vorspeise = request.form['sterne_geschmack_vorspeise']
     bewertung_menge_vorspeise = request.form['sterne_menge_vorspeise']
+
     hauptspeise = request.form['eingabe_hauptspeisen']
     bewertung_aussehen_hauptspeise = request.form['sterne_aussehen_hauptspeise']
     bewertung_geschmack_hauptspeise = request.form['sterne_geschmack_hauptspeise']
     bewertung_menge_hauptspeise = request.form['sterne_menge_hauptspeise']
+
+    dessert = request.form['eingabe_desserts']
     bewertung_aussehen_dessert = request.form['sterne_aussehen_dessert']
     bewertung_geschmack_dessert = request.form['sterne_geschmack_dessert']
     bewertung_menge_dessert = request.form['sterne_menge_dessert']
-    dessert = request.form['eingabe_desserts']
-    bewertung_service = request.form['sterne_service']
+
     anmerkungen = request.form['anmerkungen']
     bewertungseingabe = {"vorspeise": vorspeise,
                          "aussehen_vorspeise": bewertung_aussehen_vorspeise,
@@ -43,7 +45,6 @@ def eingabe_post():
                          "aussehen dessert": bewertung_aussehen_dessert,
                          "geschmack dessert": bewertung_geschmack_dessert,
                          "menge dessert": bewertung_menge_dessert,
-                         "service": bewertung_service,
                          "anmerkungen": anmerkungen
                          }
     antwort = speichern(bewertungseingabe)
@@ -98,7 +99,7 @@ def statistik():
     geschmack_dessert = dict()
     menge_dessert = dict()
 
-    service = list()
+    anmerkungen = list()
 
     bewertungen = laden()
     # eine bewertung ins "tabellenformat" kopieren.
@@ -135,7 +136,7 @@ def statistik():
         geschmack_dessert[dessert_typ].append(int(eine_bewertung["geschmack dessert"]))
         menge_dessert[dessert_typ].append(int(eine_bewertung["menge dessert"]))
 
-        service.append(int(eine_bewertung["service"]))
+        anmerkungen.append(str(eine_bewertung["anmerkungen"]))
 
     vorspeisen_diagramm = generiere_diagram(aussehen_vorspeise, geschmack_vorspeise, menge_vorspeise)
     hauptspeise_diagramm = generiere_diagram(aussehen_hauptspeise, geschmack_hauptspeise, menge_hauptspeise)

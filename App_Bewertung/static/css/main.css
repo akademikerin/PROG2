@@ -17,7 +17,7 @@ p {
 }
 
 footer {
-  background-color: #ada397;
+    background-color: #ada397;
 }
 
 
@@ -27,4 +27,7 @@ img {
     margin-top: 25px;
 }
 
-
+hr {
+    margin-left: 25px;
+    margin-right: 25px;
+        }

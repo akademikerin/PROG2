@@ -29,7 +29,6 @@ def alle_bewertungen_lesen():
     """
     try:
         # r+, liest eine datei, oder erstellt diese, falls sie nicht existiert.
-        # ACHTUNG! WEGEN DEM AUSLESEN ALLER ZEILEN, WIRD DEM GERÄT DER ARBEITSPEICHER AUSGEHEN, SOBALD DIE DATEI ~16GIGABYTE GROSS IST.
         with open("datenbank.json", "r+") as datenbank:
             return json.load(datenbank)
     except:
