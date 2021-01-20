@@ -1,11 +1,18 @@
+<!-- insert general layout -->
 {% extends 'layout.html' %}
+
 {% block content %}
+
 <h1>{{ ueberschrift }}</h1>
 <p>{{ einleitung }}</p>
 
+<!-- insert rating form -->
 <form method="post">
     <div class="container p-3 my-3 bg-dark text-white">
         <div class="row">
+
+
+            <!-- Vorspeise -->
             <div class="col-sm-3">
                 <h4>Was hatten Sie zur Vorspeise?</h4>
                 <select name="eingabe_vorspeisen" id="vorspeise">
@@ -48,6 +55,7 @@
             </div>
 
 
+            <!-- Hauptspeise -->
             <div class="col-sm-3">
                 <h4>Was hatten Sie zur Hauptspeise?</h4>
                 <select name="eingabe_hauptspeisen" id="hauptspeise">
@@ -90,6 +98,7 @@
             </div>
 
 
+            <!-- Dessert -->
             <div class="col-sm-3">
                 <h4>Was hatten Sie zum Dessert?</h4>
                 <select name="eingabe_desserts" id="dessert">
@@ -131,7 +140,7 @@
                 <a>1 -- 2 -- 3 -- 4 -- 5</a>
             </div>
 
-
+            <!-- Add comment -->
             <div class="col-sm-3">
                 <h4>Sonstige Fragen, Anmerkungen, Rückmeldungen:</h4>
                 <input type="text" name="anmerkungen" placeholder="Bitte eingeben">

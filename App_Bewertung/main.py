@@ -11,12 +11,20 @@ app = Flask("bewertung")
 
 @app.route('/')
 def start():
+    """
+    Homepage of application
+    :return: Load start.html
+    """
     ueberschrift_txt = "Herzlich Willkommen im Restaurant Hirschen"
     return render_template('start.html', app_name="Bewertung", ueberschrift=ueberschrift_txt)
 
 
 @app.route('/eingabe', methods=['POST'])
 def eingabe_post():
+    """
+    User can vote for each dish
+    :return: Statistics with average ratings
+    """
     vorspeise = request.form['eingabe_vorspeisen']
     bewertung_aussehen_vorspeise = request.form['sterne_aussehen_vorspeise']
     bewertung_geschmack_vorspeise = request.form['sterne_geschmack_vorspeise']
@@ -33,6 +41,7 @@ def eingabe_post():
     bewertung_menge_dessert = request.form['sterne_menge_dessert']
 
     anmerkungen = request.form['anmerkungen']
+
     bewertungseingabe = {"vorspeise": vorspeise,
                          "aussehen_vorspeise": bewertung_aussehen_vorspeise,
                          "geschmack vorspeise": bewertung_geschmack_vorspeise,
@@ -48,11 +57,17 @@ def eingabe_post():
                          "anmerkungen": anmerkungen
                          }
     antwort = speichern(bewertungseingabe)
+    if antwort is not None:
+        return antwort
     return statistik()
 
 
 @app.route('/eingabe', methods=['GET'])
 def eingabe_request():
+    """
+    Allows adjustments of the dishes
+    :return: Dishes
+    """
     return render_template('eingabe.html',
                            app_name="Bewertung abgeben",
                            vorspeisen=['Lachsforellenfilet',
@@ -69,6 +84,10 @@ def eingabe_request():
 
 @app.route('/liste')
 def liste():
+    """
+    Shows all submitted ratings incl. comments
+    :return: Load liste.html
+    """
     gespeicherte_bewertungen = laden()
     ueberschrift_txt = 'Ihre Bewertungsangaben'
     einleitung_txt = 'Hier wird Ihre Bewertung zu den bestellten Speisen aufgelistet.'
@@ -84,8 +103,8 @@ def liste():
 @app.route('/statistik')
 def statistik():
     """
-    Erstellt ein plotly diagram mit allen bewertungen.
-    :return: seite mit gerendertem plotly diagram.
+    Creates a plotly diagram with all ratings
+    :return: Load statistik.html with generated plotly diagram
     """
     aussehen_vorspeise = dict()
     geschmack_vorspeise = dict()
@@ -102,9 +121,13 @@ def statistik():
     anmerkungen = list()
 
     bewertungen = laden()
-    # eine bewertung ins "tabellenformat" kopieren.
-    # key = art der vorspeise
-    # Value = liste der einzelnen bewertungen
+
+    """
+    Copies rating to table format
+    Key = Type of dish
+    Value = List of individual ratings
+    """
+
     for eine_bewertung in bewertungen:
         vorspeisen_typ = eine_bewertung["vorspeise"]
         hauptspeisen_typ = eine_bewertung["hauptspeise"]
@@ -162,7 +185,10 @@ def statistik():
 
 
 def calc_average(num):
+    # Calculates average values of different categories
     sum_num = 0
+    # For each variable in the list the sum should be increased by variable
+    # For each variable in the list the sum should be increased by variable
     for t in num:
         sum_num = sum_num + t
 
@@ -176,8 +202,7 @@ def generiere_diagram(bewertungen_aussehen, bewertungen_geschmack, bewertungen_m
     resultate_aussehen = list()
     resultate_geschmack = list()
     resultate_menge = list()
-    # vorspeisentyp = tabellenspalten.
-    # deshalb ist es egal ob aussehen, geschmack oder menge wenn durch die spalten gegangen wird.
+
     for vorspeisen_typ in bewertungen_aussehen:
         vorspeisen_typen.append(vorspeisen_typ)
         resultate_aussehen.append(calc_average(bewertungen_aussehen[vorspeisen_typ]))
@@ -193,6 +218,10 @@ def generiere_diagram(bewertungen_aussehen, bewertungen_geschmack, bewertungen_m
 
 @app.route('/about')
 def about():
+    """
+    Shows general information about web-app
+    :return: Load about.html
+    """
     ueberschrift_txt = "Über diese Web-App"
     return render_template('about.html', app_name="About", ueberschrift=ueberschrift_txt)
 

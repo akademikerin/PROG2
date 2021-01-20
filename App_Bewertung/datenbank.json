@@ -43,5 +43,50 @@
         "geschmack dessert": "3",
         "menge dessert": "3",
         "anmerkungen": "Tolles Ambiente"
+    },
+    {
+        "vorspeise": "N\u00fcsslisalat mit Ei",
+        "aussehen_vorspeise": "5",
+        "geschmack vorspeise": "2",
+        "menge vorspeise": "4",
+        "hauptspeise": " Entenbrust mit Preiselbeerjus",
+        "aussehen hauptspeise": "3",
+        "geschmack hauptspeise": "3",
+        "menge hauptspeise": "3",
+        "dessert": "Zuger Kirschtorte",
+        "aussehen dessert": "3",
+        "geschmack dessert": "3",
+        "menge dessert": "3",
+        "anmerkungen": "Super Bedienung :-)"
+    },
+    {
+        "vorspeise": "Lachsforellenfilet",
+        "aussehen_vorspeise": "3",
+        "geschmack vorspeise": "3",
+        "menge vorspeise": "3",
+        "hauptspeise": "Lammcarr\u00e9 mit Perlcouscous",
+        "aussehen hauptspeise": "3",
+        "geschmack hauptspeise": "3",
+        "menge hauptspeise": "3",
+        "dessert": "Schoggi-Mille feuille",
+        "aussehen dessert": "3",
+        "geschmack dessert": "3",
+        "menge dessert": "3",
+        "anmerkungen": ""
+    },
+    {
+        "vorspeise": "Steinpilzcr\u00e8mesuppe",
+        "aussehen_vorspeise": "2",
+        "geschmack vorspeise": "4",
+        "menge vorspeise": "1",
+        "hauptspeise": "Lammcarr\u00e9 mit Perlcouscous",
+        "aussehen hauptspeise": "5",
+        "geschmack hauptspeise": "2",
+        "menge hauptspeise": "2",
+        "dessert": "K\u00e4se mit Fr\u00fcchtebrot",
+        "aussehen dessert": "2",
+        "geschmack dessert": "4",
+        "menge dessert": "1",
+        "anmerkungen": ""
     }
 ]

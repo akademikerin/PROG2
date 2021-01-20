@@ -1,16 +1,20 @@
+<!-- insert general layout -->
 {% extends 'layout.html' %}
+
 {% block content %}
+
 <h1>{{ ueberschrift }}</h1>
 
 <p>Bewerten Sie jetzt unsere Speisen - Durch Ihre Bewertung können wir uns stetig verbessern.<br>
     Herzlichen Dank für's Mitmachen!</p>
 
+<!-- insert button -->
 <a class="btn btn-outline-dark ml-4" href="{{ url_for('eingabe_request') }}" role="button">Jetzt Bewertung abgeben</a>
 
+<!-- insert image of restaurant -->
 <div>
     <img src="../static/hirschen.jpg" alt="Hirschen">
 </div>
-
 
 {% endblock %}
 

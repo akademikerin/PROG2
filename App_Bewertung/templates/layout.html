@@ -1,11 +1,13 @@
+<!-- Basic Layout File -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>{{ app_name }}</title>
+    <!-- Embed Bootstrap and CSS in HTML -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 
-
+    <!-- insert meta tags -->
     <meta charset="UTF-8">
     <meta name="author" content="Simone Kühne"/>
     <meta name="description" content="Bewertungs-Website">
@@ -15,6 +17,7 @@
 </head>
 <body>
 <header>
+    <!-- Navigation -->
     <div class="card text-center">
         <div class="card-header">
             <ul class="nav nav-tabs card-header-tabs">
@@ -38,6 +41,7 @@
     </div>
 </header>
 
+<!-- insert Bootstrap -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -47,7 +51,7 @@
 <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
 
 
-
+<!-- Footer -->
 <footer class="fixed-bottom py-1">
     <div class="container text-center">
       Simone Kühne | PRO2 | DBM19VZ | 2021

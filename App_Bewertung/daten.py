@@ -1,34 +1,33 @@
 import json
 
-
 def speichern(bewertungseingabe):
     """
-        Speichert eine Bewertungseingabe
-        :param bewertungseingabe: Die Bewertung welche gespeichert werden muss
-        :return: Das Ergebnis
+        Saves a rating input
+        :param bewertungseingabe: The rating which must be saved
+        :return: The result
     """
     bewertungen = alle_bewertungen_lesen()
 
     try:
-        # w+ öffnet oder erstellt die Datei, falls sie noch nicht existiert.
+        # w+ opens or creates file, if it does not already exist
         with open("datenbank.json", "w+") as datenbank:
-            # hängt die neue Bewertung an den Schluss der Liste
+            # Adds the new rating to the end of the list
             bewertungen.append(bewertungseingabe)
-            # schreibt die Liste der Bewertungen in die Datei
+            # Puts the list of ratings to the file
             json.dump(bewertungen, datenbank, indent=4)
 
     except:
         return "Datenbank konnte nicht geöffnet/erweitert werden."
 
-    return "Vielen Dank. Ihre Daten wurden gespeichert."
-
 
 def alle_bewertungen_lesen():
     """
-        Liest alle bewertungen aus dem file und gibt diese zurück.
+    Reads all ratings from the file
+    :return: Database with saved ratings
     """
+
     try:
-        # r+, liest eine datei, oder erstellt diese, falls sie nicht existiert.
+        # r+ reads or creates file, if it does not already exist
         with open("datenbank.json", "r+") as datenbank:
             return json.load(datenbank)
     except:
@@ -36,6 +35,10 @@ def alle_bewertungen_lesen():
 
 
 def laden():
+    """
+    Reads all ratings
+    :return: All ratings
+    """
     bewertungen = alle_bewertungen_lesen()
 
     return bewertungen

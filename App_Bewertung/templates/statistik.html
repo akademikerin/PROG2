@@ -1,6 +1,9 @@
+<!-- insert general layout -->
 {% extends 'layout.html' %}
+
 {% block content %}
 
+<!-- insert plotly.js CDN -->
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
 <h1>{{ ueberschrift }}</h1>
@@ -8,6 +11,7 @@
 
 <h2>Vorspeisen</h2>
 <div class="chart" id="vorspeisen_diagramm_container">
+    <!-- Load Plotly library and plot diagram -->
     <script>
        Plotly.plot('vorspeisen_diagramm_container',{{vorspeisen_diagramm | safe}},{});
 
@@ -16,6 +20,7 @@
 
 <h2>Hauptspeisen</h2>
 <div class="chart" id="hauptspeise_diagramm_container">
+    <!-- Load Plotly library and plot diagram -->
     <script>
        Plotly.plot('hauptspeise_diagramm_container',{{hauptspeise_diagramm | safe}},{});
 
@@ -24,11 +29,11 @@
 
 <h2>Desserts</h2>
 <div class="chart" id="dessert_diagramm_container">
+    <!-- Load Plotly library and plot diagram -->
     <script>
        Plotly.plot('dessert_diagramm_container',{{dessert_diagramm | safe}},{});
 
     </script>
 </div>
-
 
 {% endblock %}
