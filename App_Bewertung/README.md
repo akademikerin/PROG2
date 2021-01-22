@@ -34,7 +34,7 @@ Datenausgabe:
 > * Kommentar schreiben
 > * Bewertung speichern (Button)
 > * Statistik mit durchschnittlichen Bewertungen wird ausgegeben
-> * Alle Einträge inkl. Kommentare können unter "Liste" eingesehen werden>
+> * Alle Einträge inkl. Kommentare können unter "Liste" eingesehen werden
 
 # Visuelle Darstellung
 Speisen auswählen und bewerten:\

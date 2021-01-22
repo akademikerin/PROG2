@@ -169,8 +169,6 @@ def statistik():
     hauptspeise_diagramm = hauptspeise_diagramm.to_json()
     dessert_diagramm = dessert_diagramm.to_json()
 
-
-
     ueberschrift_txt = 'Statistik'
     einleitung_txt = 'Besten Dank für Ihre Bewertung. ' \
                      'Hier werden die durchschnittlichen Bewertungen pro Speise und pro Kategorie aufgeführt:'
